@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" style="width:100%" >
+            <div class="col-md-1">Team</div>
+            <div class="col-md-1">Play Off Entry</div>
+            <div class="col-md-1">Conference Semi Entry</div>
+            <div class="col-md-1">Conference Final Entry</div>
+            <div class="col-md-1">Final Entry</div>
+            <div class="col-md-1">Finals Winner</div>
+        </div>
+        {% for j in team_data %}
+        <div class="row" style="width:100%" >
+            <div class="col-md-1">{{j['team_abbreviation']}}</div>
+            <div class="col-md-1">{{j['playoff_odds']}}</div>
+            <div class="col-md-1">{{j['conference_semis']}}</div>
+            <div class="col-md-1">{{j['conference_finals']}}</div>
+            <div class="col-md-1">{{j['finals']}}</div>
+            <div class="col-md-1">{{j['champs']}}</div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
